@@ -4,11 +4,11 @@
     <!-- Character Set & Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professional A Level Chemistry Tuition - Learn Chemistry with clarity and confidence">
-    <meta name="keywords" content="chemistry, tuition, A Level, tutoring, education, science">
+    <meta name="description" content="Get Your Free A-Level Chemistry Diagnostic Session - Identify knowledge gaps and create a personalized study plan">
+    <meta name="keywords" content="chemistry diagnostic, A Level chemistry, free assessment, chemistry tutoring">
     
     <!-- Title -->
-    <title>ACEChem - A Level Chemistry Tuition</title>
+    <title>ACEChem - Free Chemistry Diagnostic Session</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="webicon.png">
@@ -73,11 +73,6 @@
             transition: var(--transition);
         }
         
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-        
         section {
             padding: 100px 0;
         }
@@ -105,21 +100,7 @@
             color: var(--accent-color);
         }
         
-        .nav-link {
-            color: var(--primary-dark) !important;
-            font-weight: 500;
-            margin: 0 5px;
-            padding: 8px 16px !important;
-            border-radius: 50px;
-            transition: var(--transition);
-        }
-        
-        .nav-link:hover {
-            background-color: rgba(14, 59, 46, 0.1);
-            transform: translateY(-2px);
-        }
-        
-        .nav-btn-enroll {
+        .nav-btn-diagnostic {
             background-color: var(--accent-color);
             color: var(--primary-dark) !important;
             padding: 10px 25px !important;
@@ -128,7 +109,7 @@
             margin-left: 10px;
         }
         
-        .nav-btn-enroll:hover {
+        .nav-btn-diagnostic:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(184, 225, 60, 0.3);
@@ -169,23 +150,76 @@
             opacity: 0.9;
         }
         
-        .btn-cta {
-            padding: 15px 45px;
-            font-size: 1.2rem;
-            font-weight: 600;
+        .btn-diagnostic {
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            padding: 18px 50px;
+            font-size: 1.3rem;
+            font-weight: 700;
             border-radius: 50px;
             border: none;
             cursor: pointer;
             transition: var(--transition);
             display: inline-block;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
         }
         
-        .btn-cta:hover {
+        .btn-diagnostic:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 30px rgba(184, 225, 60, 0.4);
+            background-color: var(--accent-hover);
+        }
+        
+        .btn-diagnostic-secondary {
+            background-color: transparent;
+            color: var(--text-light);
+            border: 2px solid var(--text-light);
+            padding: 15px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: var(--transition);
+            display: inline-block;
+            margin-left: 20px;
+        }
+        
+        .btn-diagnostic-secondary:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        /* Diagnostic Benefits */
+        .diagnostic-benefits {
+            background: var(--section-light);
+        }
+        
+        .benefit-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            height: 100%;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover i {
+            transform: scale(1.1);
+            color: var(--accent-color);
         }
         
         /* Section Headers */
@@ -214,273 +248,16 @@
             border-radius: 2px;
         }
         
-        /* Benefit Cards */
-        .benefit-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition);
-            height: 100%;
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-15px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .benefit-card i {
-            font-size: 3rem;
-            color: var(--primary-dark);
-            margin-bottom: 25px;
-            display: inline-block;
-            transition: var(--transition);
-        }
-        
-        .benefit-card:hover i {
-            transform: scale(1.1);
-            color: var(--accent-color);
-        }
-        
-        
-        /* New Pricing Card Styles */
-        .pricing-section {
-            position: relative;
-        }
-        
-        .pricing-card-new {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            border: 1px solid #eaeaea;
-            height: 100%;
-            position: relative;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin-bottom: 30px;
-        }
-        
-        .pricing-card-new:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
-        }
-        
-        .pricing-card-new.popular {
-            border: 2px solid #B8E13C;
-            position: relative;
-        }
-        
-        .popular-badge {
-            position: absolute;
-            top: -12px;
-            right: 20px;
-            background: #B8E13C;
-            color: #0e3b2e;
-            padding: 6px 15px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 600;
-        }
-        
-        .pricing-card-header-new {
-            text-align: center;
-            margin-bottom: 25px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #f0f0f0;
-        }
-        
-        .pricing-emoji {
-            font-size: 2.5rem;
-            display: block;
-            margin-bottom: 15px;
-        }
-        
-        .pricing-card-header-new h3 {
-            color: #0e3b2e;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-        }
-        
-        .pricing-subtitle {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.4;
-        }
-        
-        .pricing-price-new {
-            text-align: center;
-            margin: 25px 0;
-        }
-        
-        .main-price {
-            color: #B8E13C;
-            font-size: 2.8rem;
-            font-weight: 700;
-            line-height: 1;
-        }
-        
-        .main-price span {
-            font-size: 1.2rem;
-            color: #666;
-            font-weight: 500;
-        }
-        
-        .price-note {
-            color: #666;
-            font-size: 0.95rem;
-            margin-top: 8px;
-        }
-        
-        .early-bird-badge {
-            background: rgba(184, 225, 60, 0.15);
-            border-radius: 10px;
-            padding: 12px;
-            text-align: center;
-            margin: 20px 0;
-            color: #0e3b2e;
-            font-weight: 600;
-            font-size: 0.95rem;
-        }
-        
-        .pricing-features-new {
-            margin: 25px 0;
-        }
-        
-        .feature-item-new {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            color: #333;
-        }
-        
-        .feature-item-new i {
-            color: #B8E13C;
-            margin-right: 12px;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-        
-        .feature-item-new strong {
-            font-weight: 600;
-        }
-        
-        .pricing-schedule-new {
-            background: #f8f9fa;
-            border-radius: 10px;
-            padding: 18px;
-            margin: 25px 0;
-        }
-        
-        .pricing-schedule-new p {
-            margin-bottom: 10px;
-            font-size: 0.9rem;
-            color: #555;
-            display: flex;
-            align-items: flex-start;
-        }
-        
-        .pricing-schedule-new i {
-            margin-right: 10px;
-            color: #0e3b2e;
-            margin-top: 3px;
-            flex-shrink: 0;
-        }
-        
-        .pricing-schedule-new strong {
-            margin-right: 5px;
-            color: #333;
-        }
-        
-        .btn-choose-plan-new {
-            background: #0e3b2e;
-            color: white;
-            border: none;
-            border-radius: 50px;
-            padding: 14px 30px;
-            font-size: 1rem;
-            font-weight: 600;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            display: block;
-            text-align: center;
-        }
-        
-        .btn-choose-plan-new:hover {
-            background: #155543;
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(14, 59, 46, 0.2);
-        }
-        
-        .pricing-notes-new {
-            text-align: center;
-            margin-top: 40px;
-            color: white;
-            font-size: 0.95rem;
-            opacity: 0.9;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .pricing-notes-new p {
-            margin-bottom: 10px;
-        }
-        
-        .btn-choose-plan-main {
-            background: #B8E13C;
-            color: #0e3b2e;
-            border: none;
-            border-radius: 50px;
-            padding: 16px 40px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-choose-plan-main:hover {
-            background: #A3D977;
-            transform: translateY(-5px);
-            box-shadow: 0 12px 25px rgba(184, 225, 60, 0.3);
-        }
-        
-        /* Teaching Section */
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
-            height: 0;
-            overflow: hidden;
-            border-radius: 16px;
-            box-shadow: var(--shadow-medium);
-            margin-bottom: 40px;
-        }
-        
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-        
-        /* Pricing Section Styling */
-        #pricing {
+        /* CTA Section */
+        .cta-section {
             background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
             color: var(--text-light);
+            text-align: center;
         }
         
-        #pricing .section-header h2 {
+        .cta-section h2 {
             color: var(--text-light);
-        }
-        
-        #pricing .section-header h2::after {
-            background: var(--accent-color);
+            margin-bottom: 30px;
         }
         
         /* Footer */
@@ -533,7 +310,24 @@
             transform: translateY(-5px);
         }
         
-        /* Form Styles */
+        /* Modal Styles */
+        .modal-content {
+            border-radius: 18px;
+            border: none;
+            box-shadow: var(--shadow-heavy);
+        }
+        
+        .modal-header {
+            border-bottom: 2px solid var(--primary-dark);
+            background: var(--primary-dark);
+            color: var(--text-light);
+            border-radius: 18px 18px 0 0;
+        }
+        
+        .modal-header .btn-close {
+            filter: invert(1);
+        }
+        
         .form-control {
             border-radius: 10px;
             border: 2px solid rgba(0,0,0,0.1);
@@ -547,42 +341,37 @@
             box-shadow: 0 0 0 0.2rem rgba(14, 59, 46, 0.25);
         }
         
-        /* Modal */
-        .modal-content {
-            border-radius: 18px;
+        .btn-submit-diagnostic {
+            background: var(--accent-color);
+            color: var(--primary-dark);
             border: none;
-            box-shadow: var(--shadow-heavy);
+            border-radius: 50px;
+            padding: 14px 30px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
         }
         
-        /* Timing Field - Initially Hidden */
-        .timing-field {
-            display: none;
+        .btn-submit-diagnostic:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(184, 225, 60, 0.3);
         }
         
         /* Responsive Design */
-        @media (max-width: 1200px) {
-            .pricing-card-new {
-                height: auto;
-            }
-        }
-        
         @media (max-width: 992px) {
-            .price-main .current-price {
-                font-size: 1.9rem;
-            }
-            
-            .pricing-features {
-                max-height: 150px;
-            }
-            
-            .nav-btn-enroll {
+            .nav-btn-diagnostic {
                 margin: 10px 0 0 0;
                 width: 100%;
                 text-align: center;
             }
             
-            .main-price {
-                font-size: 2.3rem;
+            .btn-diagnostic-secondary {
+                margin-left: 0;
+                margin-top: 20px;
+                display: block;
             }
         }
         
@@ -603,18 +392,6 @@
                 font-size: 2rem;
             }
             
-            .pricing-card-new {
-                padding: 25px 20px;
-            }
-            
-            .main-price {
-                font-size: 2.3rem;
-            }
-            
-            .pricing-card-header-new h3 {
-                font-size: 1.3rem;
-            }
-            
             footer {
                 text-align: center;
             }
@@ -622,10 +399,6 @@
             footer .contact-info,
             footer .social-links {
                 text-align: center;
-            }
-            
-            footer .social-links a {
-                margin: 5px;
             }
         }
         
@@ -638,62 +411,18 @@
                 padding: 140px 20px 80px;
             }
             
-            .btn-cta,
-            .btn-choose-plan-main {
-                padding: 12px 30px;
-                font-size: 1rem;
+            .btn-diagnostic {
+                padding: 15px 35px;
+                font-size: 1.1rem;
             }
-            
-            .main-price {
-                font-size: 2rem;
-            }
-            
-            .pricing-card-header-new h3 {
-                font-size: 1.2rem;
-            }
-        }
-        
-        /* Animation Classes */
-        .fade-in {
-            animation: fadeIn 1s ease-in;
-        }
-        
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        /* Accessibility */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border: 0;
-        }
-        
-        /* Focus styles for keyboard navigation */
-        a:focus,
-        button:focus,
-        input:focus,
-        textarea:focus {
-            outline: 3px solid var(--accent-color);
-            outline-offset: 3px;
         }
     </style>
 </head>
 <body>
-    <!-- Skip to content link for accessibility -->
-    <a href="#main-content" class="sr-only">Skip to main content</a>
-
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <span>ACE</span>Chem
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
@@ -702,13 +431,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
-                        <a class="nav-link nav-btn-enroll" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
-                            <i class="fas fa-user-plus me-1"></i> Enroll Now
+                        <a class="nav-link nav-btn-diagnostic" href="#" data-bs-toggle="modal" data-bs-target="#diagnosticModal">
+                            <i class="fas fa-flask me-1"></i> Get My Free Diagnostic Session
                         </a>
                     </li>
                 </ul>
@@ -717,265 +442,73 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero fade-in" id="main-content">
+    <section class="hero">
         <div class="container" data-aos="fade-up">
-            <h1>A Level Chemistry Tuition</h1>
-            <p>Master Chemistry with expert guidance, clear explanations, and proven results</p>
-            <a href="#pricing" class="btn btn-light btn-cta" data-bs-toggle="modal" data-bs-target="#signupModal">
-                Start Learning Today
+            <h1>Discover Your A-Level Chemistry Potential</h1>
+            <p>Get a free 30-minute diagnostic session to identify knowledge gaps and create your personalized study plan</p>
+            <button class="btn-diagnostic" data-bs-toggle="modal" data-bs-target="#diagnosticModal">
+                Get My Free Diagnostic Session
+            </button>
+            <a href="pricing.html" class="btn-diagnostic-secondary">
+                View Class Options
             </a>
         </div>
     </section>
 
-    <!-- Benefits Section -->
-    <section class="section bg-light" id="benefits">
+    <!-- Diagnostic Benefits -->
+    <section class="section diagnostic-benefits" id="benefits">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Why Choose ACEChem?</h2>
-                <p class="lead">We provide focused, effective chemistry tuition that delivers results</p>
+                <h2>Why Start With a Diagnostic?</h2>
+                <p class="lead">Our diagnostic session helps create the perfect learning path for your success</p>
             </div>
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="benefit-card">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                        <h4>Expert Tutors</h4>
-                        <p>Learn from qualified chemistry specialists with proven teaching methods</p>
+                        <i class="fas fa-search"></i>
+                        <h4>Identify Knowledge Gaps</h4>
+                        <p>Pinpoint exactly which topics need focus to maximize your study efficiency</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="benefit-card">
-                        <i class="fas fa-flask"></i>
-                        <h4>Interactive Learning</h4>
-                        <p>Engaging lessons with practical examples and clear explanations</p>
+                        <i class="fas fa-road"></i>
+                        <h4>Personalized Study Plan</h4>
+                        <p>Receive a customized roadmap tailored to your specific learning needs</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="benefit-card">
                         <i class="fas fa-chart-line"></i>
-                        <h4>Proven Results</h4>
-                        <p>Consistent track record of improving grades and exam performance</p>
+                        <h4>Benchmark Your Progress</h4>
+                        <p>Establish a starting point to measure your improvement throughout the course</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Section - NEW DESIGN -->
-<section class="section pricing-section" id="pricing">
-    <div class="container">
-        <div class="section-header" data-aos="fade-up">
-            <h2>Choose Your 3-month Learning Plan</h2>
-            <p class="lead">Structured group classes or personalized 1-on-1 tutoring tailored for A-Level Chemistry</p>
-        </div>
-
-        <div class="row justify-content-center">
-            
-            <!-- Group Classes: AS or A2 Card -->
-            <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="pricing-card-new">
-                    <div class="pricing-card-header-new">
-                        <span class="pricing-emoji">💡</span>
-                        <h3>Group Classes: AS or A2</h3>
-                        <p class="pricing-subtitle">Live interactive sessions with structured syllabus coverage</p>
-                    </div>
-                    
-                    <div class="pricing-price-new">
-                        <div class="main-price">£60<span>/week</span></div>
-                        <div class="price-note">(£720 total for 3 months)</div>
-                    </div>
-                    
-                    <div class="early-bird-badge">
-                        *Early Bird: £30/week (£360 total)
-                    </div>
-                    
-                    <div class="pricing-features-new">
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Live & Interactive Teaching</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Anytime Policy</div>
-                    </div>
-                    
-                    <div class="pricing-schedule-new">
-                        <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 2 Apr OR 19 Jan - 19 Apr</p>
-                        <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Mon-Thurs (one session per day)</p>
-                        <p><i class="far fa-clock"></i> <strong>Timing:</strong> 17:15-18:15 or 18:30-19:30 GMT</p>
-                    </div>
-                    
-                    <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        Choose This Plan
-                    </button>
-                </div>
-            </div>
-            
-            <!-- Group Classes: BOTH Card -->
-            <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="pricing-card-new popular">
-                    <div class="pricing-card-header-new">
-                        <span class="pricing-emoji">🚀</span>
-                        <h3>Group Classes: BOTH</h3>
-                        <p class="pricing-subtitle">Complete A-Level coverage with premium bundle savings</p>
-                    </div>
-                    
-                    <div class="pricing-price-new">
-                        <div class="main-price">£96<span>/week</span></div>
-                        <div class="price-note">(£1,152 total for 3 months)</div>
-                    </div>
-                    
-                    <div class="early-bird-badge">
-                        *Early Bird: £48/week (£576 total)
-                    </div>
-                    
-                    <div class="pricing-features-new">
-                        <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Premium Bundle Discount</strong></div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months (AS & A2)</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Live & Interactive Teaching</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Anytime Policy</div>
-                    </div>
-                    
-                    <div class="pricing-schedule-new">
-                        <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 19 Apr </p>
-                        <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Mon-Thurs (two sessions per day)</p>
-                        <p><i class="far fa-clock"></i> <strong>Timing:</strong> 17:15-18:15 and 18:30-19:30 GMT</p>
-                    </div>
-                    
-                    <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        Choose This Plan
-                    </button>
-                </div>
-            </div>
-            
-            <!-- 1-on-1: AS or A2 Card -->
-            <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
-                <div class="pricing-card-new">
-                    <div class="pricing-card-header-new">
-                        <span class="pricing-emoji">🎯</span>
-                        <h3>1-on-1: AS or A2</h3>
-                        <p class="pricing-subtitle">Personalized tutoring with completely flexible scheduling</p>
-                    </div>
-                    
-                    <div class="pricing-price-new">
-                        <div class="main-price">£120<span>/week</span></div>
-                        <div class="price-note">(£1,440 total for 3 months)</div>
-                    </div>
-                    
-                    <div class="early-bird-badge">
-                        *Early Bird: £60/week (£720 total)
-                    </div>
-                    
-                    <div class="pricing-features-new">
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Live & Personalized Tutoring</strong></div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Fully Flexible Timing</strong></div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Anytime Policy</div>
-                    </div>
-                    
-                    <div class="pricing-schedule-new">
-                        <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 2 Apr OR 16 Jan - 16 Apr</p>
-                        <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Fri-Sun (four hourly sessions)</p>
-                        <p><i class="far fa-clock"></i> <strong>Timing:</strong> Choose your preferred hours</p>
-                    </div>
-                    
-                    <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        Choose This Plan
-                    </button>
-                </div>
-            </div>
-            
-            <!-- 1-on-1: BOTH Card -->
-            <div class="col-lg-5 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
-                <div class="pricing-card-new">
-                    <div class="pricing-card-header-new">
-                        <span class="pricing-emoji">🏆</span>
-                        <h3>1-on-1: BOTH</h3>
-                        <p class="pricing-subtitle">Ultimate personalized package for complete A-Level mastery</p>
-                    </div>
-                    
-                    <div class="pricing-price-new">
-                        <div class="main-price">£192<span>/week</span></div>
-                        <div class="price-note">(£2,304 total for 3 months)</div>
-                    </div>
-                    
-                    <div class="early-bird-badge">
-                        *Early Bird: £96/week (£1,152 total)
-                    </div>
-                    
-                    <div class="pricing-features-new">
-                        <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Premium Bundle Discount</strong></div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months (AS & A2)</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Live & Personalized Tutoring</strong></div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Fully Flexible Timing</strong></div>
-                        <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Any Time</div>
-                    </div>
-                    
-                    <div class="pricing-schedule-new">
-                        <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 16 Apr </p>
-                        <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Fri-Sun (four hourly sessions)</p>
-                        <p><i class="far fa-clock"></i> <strong>Timing:</strong> Choose your preferred hours</p>
-                    </div>
-                    
-                    <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
-                        Choose This Plan
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Pricing Notes -->
-        <div class="pricing-notes-new" data-aos="fade-up">
-            <p>*Last date for early bird sign-up is 20th December. Weekly payment made in advance.</p>
-            <p>No hidden fees. No long-term contracts. Upgrade, pause, or cancel anytime.</p>
-        </div>
-        
-        <div class="text-center mt-5" data-aos="fade-up">
-            <button class="btn-choose-plan-main" data-bs-toggle="modal" data-bs-target="#signupModal">
-                <i class="fas fa-calendar-check me-2"></i>Enroll Now & Secure Your Spot
+    <!-- CTA Section -->
+    <section class="section cta-section">
+        <div class="container" data-aos="fade-up">
+            <h2>Ready to Transform Your Chemistry Results?</h2>
+            <p class="lead mb-4">Book your free diagnostic session today - no commitment required</p>
+            <button class="btn-diagnostic" data-bs-toggle="modal" data-bs-target="#diagnosticModal">
+                <i class="fas fa-calendar-check me-2"></i> Secure Your Free Session
             </button>
         </div>
-    </div>
-</section>
-
-    <!-- Teaching Style Section -->
-    <section class="section bg-light" id="teaching">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Our Teaching Approach</h2>
-                <p class="lead">Experience our effective teaching methodology</p>
-            </div>
-            
-            <div class="video-container" data-aos="zoom-in">
-                <iframe src="https://youtu.be/6yAzm0QefmU" 
-                        title="ACEChem Teaching Methodology"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                        allowfullscreen
-                        loading="lazy">
-                </iframe>
-            </div>
-            
-            <div class="text-center mt-4" data-aos="fade-up">
-                <button class="btn btn-signup-now btn-lg" data-bs-toggle="modal" data-bs-target="#signupModal">
-                    <i class="fas fa-user-plus me-2"></i>Join Our Program Today!
-                </button>
-            </div>
-        </div>
     </section>
 
-    <!-- Sign-Up Modal -->
-    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <!-- Diagnostic Modal -->
+    <div class="modal fade" id="diagnosticModal" tabindex="-1" aria-labelledby="diagnosticModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="signupModalLabel">Join ACEChem Tuition</h5>
+                    <h5 class="modal-title" id="diagnosticModalLabel">Book Your Free Diagnostic Session</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <form action="https://formspree.io/f/xgvglbwb" method="POST" id="signupForm">
+                    <form action="thank-you.html" method="POST" id="diagnosticForm">
                         <div class="mb-3">
                             <label for="name" class="form-label">Full Name *</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
@@ -985,62 +518,20 @@
                             <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
                         </div>
                         <div class="mb-3">
-                            <label for="phone" class="form-label">Phone Number *</label>
-                            <input type="tel" class="form-control" id="phone" name="phone" placeholder="Your phone number" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="grade" class="form-label">Grade/Level *</label>
-                            <select class="form-control" id="grade" name="grade" required>
-                                <option value="">Select grade/level</option>
+                            <label for="level" class="form-label">Current Level *</label>
+                            <select class="form-control" id="level" name="level" required>
+                                <option value="">Select your level</option>
                                 <option value="AS Level">AS Level</option>
                                 <option value="A2 Level">A2 Level</option>
-                                <option value="Both AS & A2">Both AS & A2</option>
+                                <option value="Retake">Retake (Previous AS/A2)</option>
                             </select>
                         </div>
-                        <div class="mb-3">
-                            <label for="examBoard" class="form-label">Exam Board *</label>
-                            <select class="form-control" id="examBoard" name="examBoard" required>
-                                <option value="">Select exam board</option>
-                                <option value="AQA">AQA</option>
-                                <option value="Edexcel">Edexcel</option>
-                                <option value="OCR">OCR</option>
-                                <option value="CIE">Cambridge International (CIE)</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="course" class="form-label">Preferred Course *</label>
-                            <select class="form-control" id="course" name="course" required>
-                                <option value="">Select a course</option>
-                                <option value="Group AS/A2">Group Classes - AS or A2 (£60/week)</option>
-                                <option value="Group BOTH">Group Classes - BOTH (£96/week)</option>
-                                <option value="1-on-1 AS/A2">1-on-1 Tutoring - AS or A2 (£120/week)</option>
-                                <option value="1-on-1 BOTH">1-on-1 Tutoring - BOTH (£192/week)</option>
-                            </select>
-                        </div>
-                        
-                        <!-- Timing Field (Visible only for 1-on-1 courses) -->
-                        <div class="mb-3 timing-field" id="timingField">
-                            <label for="preferredTiming" class="form-label">Preferred Timing (for 1-on-1 tutoring)</label>
-                            <input type="text" class="form-control" id="preferredTiming" name="preferredTiming" placeholder="e.g., Weekends 2-3 PM, Friday 2-4 PM">
-                            <small class="form-text text-muted">Please indicate your preferred days and times for 1-on-1 sessions</small>
-                        </div>
-                        
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="earlyBird" name="earlyBird">
-                            <label class="form-check-label" for="earlyBird">I want to avail early bird discount (before Dec 20th)</label>
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="demoCheck" name="demo">
-                            <label class="form-check-label" for="demoCheck">I would like a free trial session</label>
-                        </div>
-                        <div class="mb-3">
-                            <label for="message" class="form-label">Additional Information</label>
-                            <textarea class="form-control" id="message" name="message" rows="3" placeholder="Tell us about your specific needs or questions..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-choose-plan w-100">
-                            <i class="fas fa-paper-plane me-2"></i>Submit Application
+                        <button type="submit" class="btn-submit-diagnostic">
+                            <i class="fas fa-flask me-2"></i> Get A Free Diagnostic Session
                         </button>
+                        <p class="text-muted text-center mt-3" style="font-size: 0.9rem;">
+                            You'll be redirected to a confirmation page and receive scheduling instructions via email
+                        </p>
                     </form>
                 </div>
             </div>
@@ -1057,7 +548,7 @@
                         <a href="mailto:acechem.uk@gmail.com">
                             <i class="fas fa-envelope"></i> acechem.uk@gmail.com
                         </a>
-                        <p class="mt-3">Providing expert A Level Chemistry tuition across the UK</p>
+                        <p class="mt-3">Providing focused A Level Chemistry tutoring.</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -1080,7 +571,7 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved. | Designed for academic success</p>
+                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved.</p>
                 </div>
             </div>
         </div>
@@ -1106,23 +597,8 @@
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
-        // Show/hide timing field based on course selection
-        document.getElementById('course').addEventListener('change', function() {
-            const timingField = document.getElementById('timingField');
-            const selectedCourse = this.value;
-            
-            // Show timing field only for 1-on-1 courses
-            if (selectedCourse.includes('1-on-1')) {
-                timingField.style.display = 'block';
-                document.getElementById('preferredTiming').setAttribute('required', 'required');
-            } else {
-                timingField.style.display = 'none';
-                document.getElementById('preferredTiming').removeAttribute('required');
-            }
-        });
-
         // Form submission handling
-        document.getElementById('signupForm').addEventListener('submit', function(e) {
+        document.getElementById('diagnosticForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Simple form validation
@@ -1130,43 +606,11 @@
             const isValid = form.checkValidity();
             
             if (isValid) {
-                // Show success message
-                alert('Thank you for your application! We will contact you within 24 hours.');
-                
-                // Submit form
+                // Submit form and redirect to thank you page
                 form.submit();
-                
-                // Close modal
-                const modal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
-                modal.hide();
             } else {
                 form.reportValidity();
             }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const navbarToggler = document.querySelector('.navbar-toggler');
-                    const navbarMenu = document.querySelector('.navbar-collapse');
-                    if (navbarMenu.classList.contains('show')) {
-                        navbarToggler.click();
-                    }
-                }
-            });
         });
     </script>
 </body>
