@@ -500,43 +500,44 @@
     </section>
 
     <!-- Diagnostic Modal -->
-    <div class="modal fade" id="diagnosticModal" tabindex="-1" aria-labelledby="diagnosticModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="diagnosticModalLabel">Book Your Free Diagnostic Session</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="thank-you.html" method="POST" id="diagnosticForm">
-                        <div class="mb-3">
-                            <label for="name" class="form-label">Full Name *</label>
-                            <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email Address *</label>
-                            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="level" class="form-label">Current Level *</label>
-                            <select class="form-control" id="level" name="level" required>
-                                <option value="">Select your level</option>
-                                <option value="AS Level">AS Level</option>
-                                <option value="A2 Level">A2 Level</option>
-                                <option value="Retake">Retake (Previous AS/A2)</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn-submit-diagnostic">
-                            <i class="fas fa-flask me-2"></i> Get A Free Diagnostic Session
-                        </button>
-                        <p class="text-muted text-center mt-3" style="font-size: 0.9rem;">
-                            You'll be redirected to a confirmation page and receive scheduling instructions via email
-                        </p>
-                    </form>
-                </div>
+<!-- Diagnostic Modal -->
+<div class="modal fade" id="diagnosticModal" tabindex="-1" aria-labelledby="diagnosticModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="diagnosticModalLabel">Book Your Free Diagnostic Session</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="https://formspree.io/f/mbdjkazy" method="POST" id="diagnosticForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Full Name *</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email Address *</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="level" class="form-label">Current Level *</label>
+                        <select class="form-control" id="level" name="level" required>
+                            <option value="">Select your level</option>
+                            <option value="AS Level">AS Level</option>
+                            <option value="A2 Level">A2 Level</option>
+                            <option value="Retake">Retake (Previous AS/A2)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-submit-diagnostic">
+                        <i class="fas fa-flask me-2"></i> Get A Free Diagnostic Session
+                    </button>
+                    <p class="text-muted text-center mt-3" style="font-size: 0.9rem;">
+                        You'll be redirected to a confirmation page and receive scheduling instructions via email
+                    </p>
+                </form>
             </div>
         </div>
     </div>
+</div>
 
     <!-- Footer -->
     <footer id="contact">
@@ -615,3 +616,4 @@
     </script>
 </body>
 </html>
+
