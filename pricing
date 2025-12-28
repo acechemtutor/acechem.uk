@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Character Set & Viewport -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ACEChem A-Level Chemistry Tutoring Packages - Choose your learning plan">
+    
+    <!-- Title -->
+    <title>ACEChem - A-Level Chemistry Tutoring Packages</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="webicon.png">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        /* CSS Variables for consistent theming */
+        :root {
+            --primary-dark: #0e3b2e;
+            --primary-light: #155543;
+            --accent-color: #B8E13C;
+            --accent-hover: #A3D977;
+            --text-light: #ffffff;
+            --text-dark: #333333;
+            --card-bg: #ffffff;
+            --section-light: #f8f9fa;
+            --shadow-light: 0 5px 15px rgba(0,0,0,0.1);
+            --shadow-medium: 0 8px 20px rgba(0,0,0,0.15);
+            --shadow-heavy: 0 12px 25px rgba(0,0,0,0.2);
+            --transition: all 0.3s ease;
+        }
+        
+        /* Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            min-height: 100vh;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+        
+        /* Navbar */
+        .navbar {
+            background: var(--card-bg);
+            padding: 20px 0;
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            padding: 15px 0;
+        }
+        
+        .navbar-brand {
+            color: var(--primary-dark) !important;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .navbar-brand span {
+            color: var(--accent-color);
+        }
+        
+        .nav-btn-diagnostic {
+            background-color: var(--accent-color);
+            color: var(--primary-dark) !important;
+            padding: 10px 25px !important;
+            font-weight: 600;
+            border-radius: 50px;
+            margin-left: 10px;
+        }
+        
+        .nav-btn-diagnostic:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(184, 225, 60, 0.3);
+        }
+        
+        /* Selection Section */
+        .selection-section {
+            padding: 140px 0 60px;
+            color: var(--text-light);
+            text-align: center;
+        }
+        
+        .selection-section h1 {
+            color: var(--text-light);
+            margin-bottom: 15px;
+        }
+        
+        .selection-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 40px auto;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .form-control-lg-custom {
+            background: rgba(255, 255, 255, 0.9);
+            border: 2px solid var(--accent-color);
+            border-radius: 12px;
+            padding: 15px 20px;
+            font-size: 1.1rem;
+            height: auto;
+            transition: var(--transition);
+        }
+        
+        .form-control-lg-custom:focus {
+            background: white;
+            border-color: var(--accent-hover);
+            box-shadow: 0 0 0 0.3rem rgba(184, 225, 60, 0.25);
+        }
+        
+        .btn-show-pricing {
+            background: var(--accent-color);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 50px;
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        
+        .btn-show-pricing:hover {
+            background: var(--accent-hover);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(184, 225, 60, 0.4);
+        }
+        
+        /* Pricing Cards Section */
+        .pricing-section {
+            padding: 60px 0 100px;
+            display: block;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 70px;
+        }
+        
+        .section-header h2 {
+            color: var(--text-light);
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+        
+        .lead {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        /* UPDATED: Pricing Card Styles - No header/emoji space */
+        .pricing-card-new {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eaeaea;
+            height: 100%;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-card-new:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .pricing-card-new.popular {
+            border: 2px solid #B8E13C;
+            position: relative;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #B8E13C;
+            color: #0e3b2e;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        /* REMOVED: pricing-card-header-new, pricing-emoji, pricing-subtitle styles */
+        
+        /* Start with price directly */
+        .pricing-price-new {
+            text-align: center;
+            margin: 0 0 20px 0; /* Reduced top margin */
+        }
+        
+        .main-price {
+            color: #B8E13C;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 5px;
+        }
+        
+        .main-price span {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .price-note {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 2px;
+        }
+        
+        .early-bird-badge {
+            background: rgba(184, 225, 60, 0.15);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            margin: 15px 0;
+            color: #0e3b2e;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .pricing-features-new {
+            margin: 20px 0;
+        }
+        
+        .feature-item-new {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        
+        .feature-item-new i {
+            color: #B8E13C;
+            margin-right: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .feature-item-new strong {
+            font-weight: 600;
+        }
+        
+        .pricing-schedule-new {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 20px 0;
+        }
+        
+        .pricing-schedule-new p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .pricing-schedule-new i {
+            margin-right: 10px;
+            color: #0e3b2e;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .pricing-schedule-new strong {
+            margin-right: 5px;
+            color: #333;
+        }
+        
+        .btn-choose-plan-new {
+            background: #0e3b2e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+        }
+        
+        .btn-choose-plan-new:hover {
+            background: #155543;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(14, 59, 46, 0.2);
+        }
+        
+        .pricing-notes-new {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing-notes-new p {
+            margin-bottom: 10px;
+        }
+        
+        .btn-choose-plan-main {
+            background: #B8E13C;
+            color: #0e3b2e;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-choose-plan-main:hover {
+            background: #A3D977;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(184, 225, 60, 0.3);
+        }
+        
+        /* Card Categories */
+        .card-category {
+            display: block;
+        }
+        
+        .card-category h3 {
+            color: var(--text-light);
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--primary-light);
+            color: var(--text-light);
+            padding: 60px 0 40px;
+            margin-top: 0;
+        }
+        
+        footer .contact-info,
+        footer .social-links {
+            margin-bottom: 30px;
+        }
+        
+        footer h5 {
+            color: var(--accent-color);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+        
+        footer a {
+            color: var(--text-light);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            margin: 10px 0;
+            transition: var(--transition);
+        }
+        
+        footer a:hover {
+            color: var(--accent-hover);
+            transform: translateX(5px);
+        }
+        
+        footer .social-links a {
+            font-size: 1.5rem;
+            margin: 0 10px;
+            padding: 10px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        footer .social-links a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-5px);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .nav-btn-diagnostic {
+                margin: 10px 0 0 0;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .main-price {
+                font-size: 2.3rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .selection-section {
+                padding: 120px 20px 40px;
+            }
+            
+            .selection-box {
+                padding: 30px 20px;
+            }
+            
+            .section-header h2 {
+                font-size: 2rem;
+            }
+            
+            .pricing-card-new {
+                padding: 25px 20px;
+            }
+            
+            .main-price {
+                font-size: 2.3rem;
+            }
+            
+            footer {
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .selection-section h1 {
+                font-size: 2rem;
+            }
+            
+            .btn-show-pricing {
+                padding: 12px 30px;
+                font-size: 1rem;
+            }
+            
+            .main-price {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span>ACE</span>Chem
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
+                    aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link nav-btn-diagnostic" href="index.html">
+                            <i class="fas fa-flask me-1"></i> Get Free Diagnostic
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Class Selection Section -->
+    <section class="selection-section" id="selection">
+        <div class="container">
+            <h1>Choose Your Class Type</h1>
+            <p class="lead">Select your preferred learning style to see available packages and pricing</p>
+            
+            <div class="selection-box" data-aos="fade-up">
+                <div class="mb-4">
+                    <label for="classType" class="form-label h4 text-light mb-3">
+                        <i class="fas fa-graduation-cap me-2"></i> Which type of class are you interested in?
+                    </label>
+                    <select class="form-select form-control-lg-custom" id="classType" aria-label="Select class type">
+                        <option selected disabled>-- Please select a class type --</option>
+                        <option value="group-as-a2">Group Classes: AS or A2</option>
+                        <option value="group-both">Group Classes: BOTH (AS & A2)</option>
+                        <option value="one-on-one-as-a2">1-on-1 Tutoring: AS or A2</option>
+                        <option value="one-on-one-both">1-on-1 Tutoring: BOTH (AS & A2)</option>
+                        <option value="all">Show All Options</option>
+                    </select>
+                </div>
+                
+                <button class="btn-show-pricing" id="showPricingBtn" disabled>
+                    <i class="fas fa-eye me-2"></i> View Selected Option
+                </button>
+                
+                <a href="index.html" class="d-block mt-4 text-light" style="text-decoration: underline;">
+                    <i class="fas fa-arrow-left me-2"></i> Back to diagnostic booking
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section - ALL CARDS VISIBLE -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Available Packages</h2>
+                <p class="lead">Select a class type above to focus on specific options, or browse all packages below</p>
+                
+                <a href="#selection" class="btn btn-outline-light mt-3" id="changeSelectionBtn">
+                    <i class="fas fa-edit me-2"></i> Change Class Selection
+                </a>
+            </div>
+
+            <!-- Group Classes: AS or A2 -->
+            <div class="card-category active" id="group-as-a2-cards">
+                <h3>Group Classes: AS or A2</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
+                        <div class="pricing-card-new">
+                            <div class="popular-badge">Most Popular</div>
+                            <div class="pricing-price-new">
+                                <div class="main-price">£60<span>/week</span></div>
+                                <div class="price-note">(£720 total for 3 months)</div>
+                            </div>
+                            
+                            <div class="early-bird-badge">
+                                *Early Bird: £30/week (£360 total)
+                            </div>
+                            
+                            <div class="pricing-features-new">
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Live & Interactive Teaching</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Anytime Policy</div>
+                            </div>
+                            
+                            <div class="pricing-schedule-new">
+                                <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 2 Apr OR 19 Jan - 19 Apr</p>
+                                <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Mon-Thurs (one session per day)</p>
+                                <p><i class="far fa-clock"></i> <strong>Timing:</strong> 17:15-18:15 or 18:30-19:30 GMT</p>
+                            </div>
+                            
+                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
+                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Group Classes: BOTH -->
+            <div class="card-category" id="group-both-cards">
+                <h3>Group Classes: BOTH (AS & A2)</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
+                        <div class="pricing-card-new popular">
+                            <div class="popular-badge">Most Popular</div>
+                            <div class="pricing-price-new">
+                                <div class="main-price">£96<span>/week</span></div>
+                                <div class="price-note">(£1,152 total for 3 months)</div>
+                            </div>
+                            
+                            <div class="early-bird-badge">
+                                *Early Bird: £48/week (£576 total)
+                            </div>
+                            
+                            <div class="pricing-features-new">
+                                <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Premium Bundle Discount</strong></div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months (AS & A2)</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Live & Interactive Teaching</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Anytime Policy</div>
+                            </div>
+                            
+                            <div class="pricing-schedule-new">
+                                <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 19 Apr</p>
+                                <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Mon-Thurs (two sessions per day)</p>
+                                <p><i class="far fa-clock"></i> <strong>Timing:</strong> 17:15-18:15 and 18:30-19:30 GMT</p>
+                            </div>
+                            
+                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
+                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1-on-1 Tutoring: AS or A2 -->
+            <div class="card-category" id="one-on-one-as-a2-cards">
+                <h3>1-on-1 Tutoring: AS or A2</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
+                        <div class="pricing-card-new">
+                            <div class="pricing-price-new">
+                                <div class="main-price">£120<span>/week</span></div>
+                                <div class="price-note">(£1,440 total for 3 months)</div>
+                            </div>
+                            
+                            <div class="early-bird-badge">
+                                *Early Bird: £60/week (£720 total)
+                            </div>
+                            
+                            <div class="pricing-features-new">
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Live & Personalized Tutoring</strong></div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Fully Flexible Timing</strong></div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Anytime Policy</div>
+                            </div>
+                            
+                            <div class="pricing-schedule-new">
+                                <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 2 Apr OR 16 Jan - 16 Apr</p>
+                                <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Fri-Sun (four hourly sessions)</p>
+                                <p><i class="far fa-clock"></i> <strong>Timing:</strong> Choose your preferred hours</p>
+                            </div>
+                            
+                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
+                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 1-on-1 Tutoring: BOTH -->
+            <div class="card-category" id="one-on-one-both-cards">
+                <h3>1-on-1 Tutoring: BOTH (AS & A2)</h3>
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
+                        <div class="pricing-card-new">
+                            <div class="pricing-price-new">
+                                <div class="main-price">£192<span>/week</span></div>
+                                <div class="price-note">(£2,304 total for 3 months)</div>
+                            </div>
+                            
+                            <div class="early-bird-badge">
+                                *Early Bird: £96/week (£1,152 total)
+                            </div>
+                            
+                            <div class="pricing-features-new">
+                                <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Premium Bundle Discount</strong></div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months (AS & A2)</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Live & Personalized Tutoring</strong></div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Past Paper Practice</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Discord Support Community</div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Fully Flexible Timing</strong></div>
+                                <div class="feature-item-new"><i class="fas fa-check"></i> Cancel Any Time</div>
+                            </div>
+                            
+                            <div class="pricing-schedule-new">
+                                <p><i class="far fa-calendar-alt"></i> <strong>Schedule:</strong> 2 Jan - 16 Apr</p>
+                                <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Fri-Sun (four hourly sessions)</p>
+                                <p><i class="far fa-clock"></i> <strong>Timing:</strong> Choose your preferred hours</p>
+                            </div>
+                            
+                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
+                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pricing Notes -->
+            <div class="pricing-notes-new" data-aos="fade-up">
+                <p>*Last date for early bird sign-up is 20th December. Weekly payment made in advance.</p>
+                <p>No hidden fees. No long-term contracts. Upgrade, pause, or cancel anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="contact-info">
+                        <h5>Contact Information</h5>
+                        <a href="mailto:acechem.uk@gmail.com">
+                            <i class="fas fa-envelope"></i> acechem.uk@gmail.com
+                        </a>
+                        <p class="mt-3">Providing expert A Level Chemistry tuition across the UK</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="social-links text-lg-end">
+                        <h5>Connect With Us</h5>
+                        <a href="https://www.linkedin.com/company/acechemuk/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://www.instagram.com/acechem.uk/" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://www.youtube.com/channel/UCStiiAWN2BkqBTKLZk_1pyw" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@acechemuk" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            navbar.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // Class selection functionality
+        const classTypeSelect = document.getElementById('classType');
+        const showPricingBtn = document.getElementById('showPricingBtn');
+        const changeSelectionBtn = document.getElementById('changeSelectionBtn');
+
+        // Get all card categories
+        const allCardCategories = document.querySelectorAll('.card-category');
+        
+        // Initially show only the first category
+        allCardCategories.forEach((category, index) => {
+            if (index !== 0) {
+                category.style.display = 'none';
+            }
+        });
+
+        // Enable button when selection is made
+        classTypeSelect.addEventListener('change', function() {
+            showPricingBtn.disabled = !this.value;
+        });
+
+        // Show selected pricing category
+        showPricingBtn.addEventListener('click', function() {
+            if (!classTypeSelect.value) return;
+            
+            const selectedValue = classTypeSelect.value;
+            
+            // Hide all categories first
+            allCardCategories.forEach(category => {
+                category.style.display = 'none';
+            });
+            
+            // Show selected category or all
+            if (selectedValue === 'all') {
+                allCardCategories.forEach(category => {
+                    category.style.display = 'block';
+                });
+            } else {
+                const selectedCategory = document.getElementById(`${selectedValue}-cards`);
+                if (selectedCategory) {
+                    selectedCategory.style.display = 'block';
+                }
+            }
+            
+            // Scroll to pricing section
+            document.getElementById('pricing').scrollIntoView({ behavior: 'smooth' });
+            
+            // Refresh AOS animations for newly visible content
+            setTimeout(() => {
+                AOS.refresh();
+            }, 300);
+        });
+
+        // Change selection button
+        changeSelectionBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            document.getElementById('selection').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
