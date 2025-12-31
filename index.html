@@ -4,11 +4,11 @@
     <!-- Character Set & Viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Get Your Free A-Level Chemistry Diagnostic Session - Identify knowledge gaps and create a personalized study plan">
-    <meta name="keywords" content="chemistry diagnostic, A Level chemistry, free assessment, chemistry tutoring">
+    <meta name="description" content="Professional A Level Chemistry Tuition - Learn Chemistry with clarity and confidence">
+    <meta name="keywords" content="chemistry, tuition, A Level, tutoring, education, science">
     
     <!-- Title -->
-    <title>ACEChem - Free Chemistry Diagnostic Session</title>
+    <title>ACEChem - A Level Chemistry Tuition</title>
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="webicon.png">
@@ -73,6 +73,11 @@
             transition: var(--transition);
         }
         
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        
         section {
             padding: 100px 0;
         }
@@ -100,7 +105,21 @@
             color: var(--accent-color);
         }
         
-        .nav-btn-diagnostic {
+        .nav-link {
+            color: var(--primary-dark) !important;
+            font-weight: 500;
+            margin: 0 5px;
+            padding: 8px 16px !important;
+            border-radius: 50px;
+            transition: var(--transition);
+        }
+        
+        .nav-link:hover {
+            background-color: rgba(14, 59, 46, 0.1);
+            transform: translateY(-2px);
+        }
+        
+        .nav-btn-enroll {
             background-color: var(--accent-color);
             color: var(--primary-dark) !important;
             padding: 10px 25px !important;
@@ -109,7 +128,7 @@
             margin-left: 10px;
         }
         
-        .nav-btn-diagnostic:hover {
+        .nav-btn-enroll:hover {
             background-color: var(--accent-hover);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(184, 225, 60, 0.3);
@@ -150,76 +169,23 @@
             opacity: 0.9;
         }
         
-        .btn-diagnostic {
-            background-color: var(--accent-color);
-            color: var(--primary-dark);
-            padding: 18px 50px;
-            font-size: 1.3rem;
-            font-weight: 700;
+        .btn-cta {
+            padding: 15px 45px;
+            font-size: 1.2rem;
+            font-weight: 600;
             border-radius: 50px;
             border: none;
             cursor: pointer;
             transition: var(--transition);
             display: inline-block;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
         }
         
-        .btn-diagnostic:hover {
+        .btn-cta:hover {
             transform: translateY(-5px) scale(1.05);
-            box-shadow: 0 15px 30px rgba(184, 225, 60, 0.4);
-            background-color: var(--accent-hover);
-        }
-        
-        .btn-diagnostic-secondary {
-            background-color: transparent;
-            color: var(--text-light);
-            border: 2px solid var(--text-light);
-            padding: 15px 40px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            border-radius: 50px;
-            cursor: pointer;
-            transition: var(--transition);
-            display: inline-block;
-            margin-left: 20px;
-        }
-        
-        .btn-diagnostic-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
-            transform: translateY(-3px);
-        }
-        
-        /* Diagnostic Benefits */
-        .diagnostic-benefits {
-            background: var(--section-light);
-        }
-        
-        .benefit-card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            padding: 40px 30px;
-            box-shadow: var(--shadow-light);
-            transition: var(--transition);
-            height: 100%;
-            text-align: center;
-            border: 1px solid rgba(0,0,0,0.05);
-        }
-        
-        .benefit-card:hover {
-            transform: translateY(-10px);
-            box-shadow: var(--shadow-medium);
-        }
-        
-        .benefit-card i {
-            font-size: 3rem;
-            color: var(--primary-dark);
-            margin-bottom: 25px;
-            display: inline-block;
-            transition: var(--transition);
-        }
-        
-        .benefit-card:hover i {
-            transform: scale(1.1);
-            color: var(--accent-color);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
         }
         
         /* Section Headers */
@@ -248,16 +214,313 @@
             border-radius: 2px;
         }
         
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
-            color: var(--text-light);
+        /* Benefit Cards */
+        .benefit-card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 40px 30px;
+            box-shadow: var(--shadow-light);
+            transition: var(--transition);
+            height: 100%;
+            text-align: center;
+            border: 1px solid rgba(0,0,0,0.05);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-medium);
+        }
+        
+        .benefit-card i {
+            font-size: 3rem;
+            color: var(--primary-dark);
+            margin-bottom: 25px;
+            display: inline-block;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover i {
+            transform: scale(1.1);
+            color: var(--accent-color);
+        }
+        
+        
+        /* New Pricing Card Styles */
+        .pricing-section {
+            position: relative;
+        }
+        
+        .pricing-card-new {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            border: 1px solid #eaeaea;
+            height: 100%;
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-card-new:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+        
+        .pricing-card-new.popular {
+            border: 2px solid #B8E13C;
+            position: relative;
+        }
+        
+        .popular-badge {
+            position: absolute;
+            top: -12px;
+            right: 20px;
+            background: #B8E13C;
+            color: #0e3b2e;
+            padding: 6px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        
+        .pricing-card-header-new {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .pricing-emoji {
+            font-size: 2.5rem;
+            display: block;
+            margin-bottom: 15px;
+        }
+        
+        .pricing-card-header-new h3 {
+            color: #0e3b2e;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-subtitle {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+        
+        .pricing-price-new {
+            text-align: center;
+            margin: 25px 0;
+        }
+        
+        .main-price {
+            color: #B8E13C;
+            font-size: 2.8rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+        
+        .main-price span {
+            font-size: 1.2rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        .price-note {
+            color: #666;
+            font-size: 0.95rem;
+            margin-top: 8px;
+        }
+        
+        .early-bird-badge {
+            background: rgba(184, 225, 60, 0.15);
+            border-radius: 10px;
+            padding: 12px;
+            text-align: center;
+            margin: 20px 0;
+            color: #0e3b2e;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .pricing-features-new {
+            margin: 25px 0;
+        }
+        
+        .feature-item-new {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            color: #333;
+        }
+        
+        .feature-item-new i {
+            color: #B8E13C;
+            margin-right: 12px;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .feature-item-new strong {
+            font-weight: 600;
+        }
+        
+        .pricing-schedule-new {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 18px;
+            margin: 25px 0;
+        }
+        
+        .pricing-schedule-new p {
+            margin-bottom: 10px;
+            font-size: 0.9rem;
+            color: #555;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .pricing-schedule-new i {
+            margin-right: 10px;
+            color: #0e3b2e;
+            margin-top: 3px;
+            flex-shrink: 0;
+        }
+        
+        .pricing-schedule-new strong {
+            margin-right: 5px;
+            color: #333;
+        }
+        
+        .btn-choose-plan-new {
+            background: #0e3b2e;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            padding: 14px 30px;
+            font-size: 1rem;
+            font-weight: 600;
+            width: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: block;
             text-align: center;
         }
         
-        .cta-section h2 {
+        .btn-choose-plan-new:hover {
+            background: #155543;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(14, 59, 46, 0.2);
+        }
+        
+        .pricing-notes-new {
+            text-align: center;
+            margin-top: 40px;
+            color: white;
+            font-size: 0.95rem;
+            opacity: 0.9;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .pricing-notes-new p {
+            margin-bottom: 10px;
+        }
+        
+        .btn-choose-plan-main {
+            background: #B8E13C;
+            color: #0e3b2e;
+            border: none;
+            border-radius: 50px;
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-choose-plan-main:hover {
+            background: #A3D977;
+            transform: translateY(-5px);
+            box-shadow: 0 12px 25px rgba(184, 225, 60, 0.3);
+        }
+        
+        /* Teaching Section */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--shadow-medium);
+            margin-bottom: 40px;
+            background-color: #000; /* Fallback background */
+        }
+        
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Video Loading Fallback */
+        .video-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
+            color: white;
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .video-fallback h3 {
+            margin-bottom: 15px;
+        }
+        
+        .video-fallback .btn-watch {
+            margin-top: 20px;
+            background-color: var(--accent-color);
+            color: var(--primary-dark);
+            border: none;
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .video-fallback .btn-watch:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        /* Pricing Section Styling */
+        #pricing {
+            background: linear-gradient(135deg, var(--primary-dark), var(--primary-light));
             color: var(--text-light);
-            margin-bottom: 30px;
+        }
+        
+        #pricing .section-header h2 {
+            color: var(--text-light);
+        }
+        
+        #pricing .section-header h2::after {
+            background: var(--accent-color);
         }
         
         /* Footer */
@@ -310,24 +573,7 @@
             transform: translateY(-5px);
         }
         
-        /* Modal Styles */
-        .modal-content {
-            border-radius: 18px;
-            border: none;
-            box-shadow: var(--shadow-heavy);
-        }
-        
-        .modal-header {
-            border-bottom: 2px solid var(--primary-dark);
-            background: var(--primary-dark);
-            color: var(--text-light);
-            border-radius: 18px 18px 0 0;
-        }
-        
-        .modal-header .btn-close {
-            filter: invert(1);
-        }
-        
+        /* Form Styles */
         .form-control {
             border-radius: 10px;
             border: 2px solid rgba(0,0,0,0.1);
@@ -341,37 +587,42 @@
             box-shadow: 0 0 0 0.2rem rgba(14, 59, 46, 0.25);
         }
         
-        .btn-submit-diagnostic {
-            background: var(--accent-color);
-            color: var(--primary-dark);
+        /* Modal */
+        .modal-content {
+            border-radius: 18px;
             border: none;
-            border-radius: 50px;
-            padding: 14px 30px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            width: 100%;
-            cursor: pointer;
-            transition: all 0.3s ease;
+            box-shadow: var(--shadow-heavy);
         }
         
-        .btn-submit-diagnostic:hover {
-            background: var(--accent-hover);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(184, 225, 60, 0.3);
+        /* Timing Field - Initially Hidden */
+        .timing-field {
+            display: none;
         }
         
         /* Responsive Design */
+        @media (max-width: 1200px) {
+            .pricing-card-new {
+                height: auto;
+            }
+        }
+        
         @media (max-width: 992px) {
-            .nav-btn-diagnostic {
+            .price-main .current-price {
+                font-size: 1.9rem;
+            }
+            
+            .pricing-features {
+                max-height: 150px;
+            }
+            
+            .nav-btn-enroll {
                 margin: 10px 0 0 0;
                 width: 100%;
                 text-align: center;
             }
             
-            .btn-diagnostic-secondary {
-                margin-left: 0;
-                margin-top: 20px;
-                display: block;
+            .main-price {
+                font-size: 2.3rem;
             }
         }
         
@@ -392,6 +643,18 @@
                 font-size: 2rem;
             }
             
+            .pricing-card-new {
+                padding: 25px 20px;
+            }
+            
+            .main-price {
+                font-size: 2.3rem;
+            }
+            
+            .pricing-card-header-new h3 {
+                font-size: 1.3rem;
+            }
+            
             footer {
                 text-align: center;
             }
@@ -399,6 +662,10 @@
             footer .contact-info,
             footer .social-links {
                 text-align: center;
+            }
+            
+            footer .social-links a {
+                margin: 5px;
             }
         }
         
@@ -411,18 +678,62 @@
                 padding: 140px 20px 80px;
             }
             
-            .btn-diagnostic {
-                padding: 15px 35px;
-                font-size: 1.1rem;
+            .btn-cta,
+            .btn-choose-plan-main {
+                padding: 12px 30px;
+                font-size: 1rem;
             }
+            
+            .main-price {
+                font-size: 2rem;
+            }
+            
+            .pricing-card-header-new h3 {
+                font-size: 1.2rem;
+            }
+        }
+        
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Accessibility */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+        
+        /* Focus styles for keyboard navigation */
+        a:focus,
+        button:focus,
+        input:focus,
+        textarea:focus {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 3px;
         }
     </style>
 </head>
 <body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="sr-only">Skip to main content</a>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#">
                 <span>ACE</span>Chem
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" 
@@ -431,9 +742,13 @@
             </button>
             <div class="collapse navbar-collapse" id="navMenu">
                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#benefits">Benefits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Classes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#teaching">Teaching</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
                     <li class="nav-item">
-                        <a class="nav-link nav-btn-diagnostic" href="#" data-bs-toggle="modal" data-bs-target="#diagnosticModal">
-                            <i class="fas fa-flask me-1"></i> Get My Free Diagnostic Session
+                        <a class="nav-link nav-btn-enroll" href="#" data-bs-toggle="modal" data-bs-target="#signupModal">
+                            <i class="fas fa-user-plus me-1"></i> Enroll Now
                         </a>
                     </li>
                 </ul>
@@ -442,102 +757,111 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero fade-in" id="main-content">
         <div class="container" data-aos="fade-up">
-            <h1>Discover Your A-Level Chemistry Potential</h1>
-            <p>Get a free 30-minute diagnostic session to identify knowledge gaps and create your personalized study plan</p>
-            <button class="btn-diagnostic" data-bs-toggle="modal" data-bs-target="#diagnosticModal">
-                Get My Free Diagnostic Session
-            </button>
-            <a href="pricing.html" class="btn-diagnostic-secondary">
-                View Class Options
+            <h1>A Level Chemistry Tuition</h1>
+            <p>Master Chemistry with expert guidance, clear explanations, and proven results</p>
+            <a href="pricing.html"  class="btn btn-light btn-cta">
+                View Classes
             </a>
         </div>
     </section>
 
-    <!-- Diagnostic Benefits -->
-    <section class="section diagnostic-benefits" id="benefits">
+    <!-- Benefits Section -->
+    <section class="section bg-light" id="benefits">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2>Why Start With a Diagnostic?</h2>
-                <p class="lead">Our diagnostic session helps create the perfect learning path for your success</p>
+                <h2>Why Choose ACEChem?</h2>
+                <p class="lead">We provide focused, effective chemistry tuition that delivers results</p>
             </div>
             <div class="row">
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="benefit-card">
-                        <i class="fas fa-search"></i>
-                        <h4>Identify Knowledge Gaps</h4>
-                        <p>Pinpoint exactly which topics need focus to maximize your study efficiency</p>
+                        <i class="fas fa-chalkboard-teacher"></i>
+                        <h4>Expert Tutors</h4>
+                        <p>Learn from qualified chemistry specialists with proven teaching methods</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="benefit-card">
-                        <i class="fas fa-road"></i>
-                        <h4>Personalized Study Plan</h4>
-                        <p>Receive a customized roadmap tailored to your specific learning needs</p>
+                        <i class="fas fa-flask"></i>
+                        <h4>Interactive Learning</h4>
+                        <p>Engaging lessons with practical examples and clear explanations</p>
                     </div>
                 </div>
                 <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="benefit-card">
                         <i class="fas fa-chart-line"></i>
-                        <h4>Benchmark Your Progress</h4>
-                        <p>Establish a starting point to measure your improvement throughout the course</p>
+                        <h4>Proven Results</h4>
+                        <p>Consistent track record of improving grades and exam performance</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="section cta-section">
-        <div class="container" data-aos="fade-up">
-            <h2>Ready to Transform Your Chemistry Results?</h2>
-            <p class="lead mb-4">Book your free diagnostic session today - no commitment required</p>
-            <button class="btn-diagnostic" data-bs-toggle="modal" data-bs-target="#diagnosticModal">
-                <i class="fas fa-calendar-check me-2"></i> Secure Your Free Session
-            </button>
+
+    <!-- Teaching Style Section -->
+    <section class="section bg-light" id="teaching">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2>Our Teaching Approach</h2>
+                <p class="lead">Experience our effective teaching methodology</p>
+            </div>
+
+            <div class="video-container" data-aos="zoom-in">
+                <!-- Solution 1: Use youtube-nocookie.com domain -->
+                <iframe src="https://www.youtube-nocookie.com/embed/6yAzm0QefmU?rel=0&modestbranding=1" 
+                        title="ACEChem Teaching Methodology"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                </iframe>
+                
+                <!-- Fallback content in case iframe fails -->
+                <div class="video-fallback" id="videoFallback" style="display: none;">
+                    <i class="fas fa-video fa-4x mb-3"></i>
+                    <h3>Watch Our Teaching Methodology</h3>
+                    <p>Click below to watch our teaching demonstration on YouTube</p>
+                    <a href="https://youtu.be/6yAzm0QefmU" target="_blank" rel="noopener noreferrer" class="btn-watch">
+                        <i class="fab fa-youtube me-2"></i>Watch on YouTube
+                    </a>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4" data-aos="fade-up">
+                <button class="btn btn-light btn-cta" data-bs-toggle="modal" data-bs-target="#signupModal">
+                    <i class="fas fa-user-plus me-2"></i>Improve Your Grade Today
+                </button>
+            </div>
         </div>
     </section>
 
-    <!-- Diagnostic Modal -->
-<!-- Diagnostic Modal -->
-<div class="modal fade" id="diagnosticModal" tabindex="-1" aria-labelledby="diagnosticModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="diagnosticModalLabel">Book Your Free Diagnostic Session</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form action="https://formspree.io/f/mbdjkazy" method="POST" id="diagnosticForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Full Name *</label>
-                        <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email Address *</label>
-                        <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
-                    </div>
-                    <div class="mb-3">
-                        <label for="level" class="form-label">Current Level *</label>
-                        <select class="form-control" id="level" name="level" required>
-                            <option value="">Select your level</option>
-                            <option value="AS Level">AS Level</option>
-                            <option value="A2 Level">A2 Level</option>
-                            <option value="Retake">Retake (Previous AS/A2)</option>
-                        </select>
-                    </div>
-                    <button type="submit" class="btn-submit-diagnostic">
-                        <i class="fas fa-flask me-2"></i> Get A Free Diagnostic Session
-                    </button>
-                    <p class="text-muted text-center mt-3" style="font-size: 0.9rem;">
-                        You'll be redirected to a confirmation page and receive scheduling instructions via email
-                    </p>
-                </form>
+    <!-- Sign-Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">We will get back to you!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/xgvglbwb" method="POST" id="signupForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-choose-plan w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Submit
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Footer -->
     <footer id="contact">
@@ -545,11 +869,11 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-info">
-                        <h5>Contact Information</h5>
+                        <h5>Contact Us</h5>
                         <a href="mailto:acechem.uk@gmail.com">
-                            <i class="fas fa-envelope"></i> acechem.uk@gmail.com
+                            <i class="fas fa-envelope"></i> acechem.uk@gmail.com (For Queries or Enrollment)
                         </a>
-                        <p class="mt-3">Providing focused A Level Chemistry tutoring.</p>
+                        <p class="mt-3">Providing expert A Level Chemistry tuition across the UK</p>
                     </div>
                 </div>
                 <div class="col-lg-6">
@@ -572,7 +896,7 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved. | Designed for academic success</p>
                 </div>
             </div>
         </div>
@@ -598,8 +922,88 @@
             navbar.classList.toggle('scrolled', window.scrollY > 50);
         });
 
+        // Show/hide timing field based on course selection
+        document.getElementById('course').addEventListener('change', function() {
+            const timingField = document.getElementById('timingField');
+            const selectedCourse = this.value;
+            
+            // Show timing field only for 1-on-1 courses
+            if (selectedCourse.includes('1-on-1')) {
+                timingField.style.display = 'block';
+                document.getElementById('preferredTiming').setAttribute('required', 'required');
+            } else {
+                timingField.style.display = 'none';
+                document.getElementById('preferredTiming').removeAttribute('required');
+            }
+        });
+
+        // Enhanced YouTube video handling with multiple fallbacks
+        document.addEventListener('DOMContentLoaded', function() {
+            const videoContainer = document.querySelector('.video-container');
+            const videoIframe = document.querySelector('.video-container iframe');
+            const videoFallback = document.getElementById('videoFallback');
+            
+            // Try different YouTube URLs if one fails
+            const youtubeURLs = [
+                'https://www.youtube-nocookie.com/embed/6yAzm0QefmU?rel=0&modestbranding=1',
+                'https://www.youtube.com/embed/6yAzm0QefmU?rel=0',
+                'https://youtube.com/embed/6yAzm0QefmU'
+            ];
+            
+            let currentURLIndex = 0;
+            
+            // Function to try loading a YouTube URL
+            function tryYouTubeURL(urlIndex) {
+                if (urlIndex >= youtubeURLs.length) {
+                    // All URLs failed, show fallback
+                    console.log('All YouTube URLs failed, showing fallback');
+                    videoIframe.style.display = 'none';
+                    videoFallback.style.display = 'flex';
+                    return;
+                }
+                
+                videoIframe.src = youtubeURLs[urlIndex];
+                currentURLIndex = urlIndex;
+            }
+            
+            // Check if iframe loaded successfully
+            videoIframe.addEventListener('load', function() {
+                console.log('YouTube iframe loaded successfully with URL:', youtubeURLs[currentURLIndex]);
+                
+                // Double-check if it's actually loaded by checking if we can access certain properties
+                setTimeout(function() {
+                    try {
+                        // Check if iframe has content
+                        const iframeDoc = videoIframe.contentDocument || videoIframe.contentWindow.document;
+                        console.log('YouTube iframe content accessible');
+                    } catch (e) {
+                        console.log('YouTube iframe cross-origin error (normal for embeds), but it loaded');
+                    }
+                }, 1000);
+            });
+            
+            videoIframe.addEventListener('error', function() {
+                console.log('YouTube iframe failed to load with URL:', youtubeURLs[currentURLIndex]);
+                
+                // Try next URL
+                setTimeout(function() {
+                    tryYouTubeURL(currentURLIndex + 1);
+                }, 1000);
+            });
+            
+            // Initial load
+            tryYouTubeURL(0);
+            
+            // Alternative: Load iframe after page is fully loaded
+            setTimeout(function() {
+                if (!videoIframe.src) {
+                    tryYouTubeURL(0);
+                }
+            }, 1000);
+        });
+
         // Form submission handling
-        document.getElementById('diagnosticForm').addEventListener('submit', function(e) {
+        document.getElementById('signupForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Simple form validation
@@ -607,13 +1011,44 @@
             const isValid = form.checkValidity();
             
             if (isValid) {
-                // Submit form and redirect to thank you page
+                // Show success message
+                alert('Thank you for your application! We will contact you within 24 hours.');
+                
+                // Submit form
                 form.submit();
+                
+                // Close modal
+                const modal = bootstrap.Modal.getInstance(document.getElementById('signupModal'));
+                modal.hide();
             } else {
                 form.reportValidity();
             }
         });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const navbarToggler = document.querySelector('.navbar-toggler');
+                    const navbarMenu = document.querySelector('.navbar-collapse');
+                    if (navbarMenu.classList.contains('show')) {
+                        navbarToggler.click();
+                    }
+                }
+            });
+        });
     </script>
 </body>
 </html>
-
