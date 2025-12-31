@@ -527,15 +527,6 @@
                     aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link nav-btn-diagnostic" href="index.html">
-                            <i class="fas fa-flask me-1"></i> Get Free Diagnostic
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
     </nav>
 
@@ -543,7 +534,7 @@
     <section class="selection-section" id="selection">
         <div class="container">
             <h1>Choose Your Class Type</h1>
-            <p class="lead">Select your preferred learning style to see available packages and pricing</p>
+            <p class="lead">Select your preferred learning style and grade to find available courses. Register Now!</p>
             
             <div class="selection-box" data-aos="fade-up">
                 <div class="mb-4">
@@ -563,10 +554,6 @@
                 <button class="btn-show-pricing" id="showPricingBtn" disabled>
                     <i class="fas fa-eye me-2"></i> View Selected Option
                 </button>
-                
-                <a href="index.html" class="d-block mt-4 text-light" style="text-decoration: underline;">
-                    <i class="fas fa-arrow-left me-2"></i> Back to diagnostic booking
-                </a>
             </div>
         </div>
     </section>
@@ -574,14 +561,6 @@
     <!-- Pricing Section - ALL CARDS VISIBLE -->
     <section class="section pricing-section" id="pricing">
         <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <h2>Available Packages</h2>
-                <p class="lead">Select a class type above to focus on specific options, or browse all packages below</p>
-                
-                <a href="#selection" class="btn btn-outline-light mt-3" id="changeSelectionBtn">
-                    <i class="fas fa-edit me-2"></i> Change Class Selection
-                </a>
-            </div>
 
             <!-- Group Classes: AS or A2 -->
             <div class="card-category active" id="group-as-a2-cards">
@@ -589,15 +568,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
                         <div class="pricing-card-new">
-                            <div class="popular-badge">Most Popular</div>
-                            <div class="pricing-price-new">
-                                <div class="main-price">£60<span>/week</span></div>
-                                <div class="price-note">(£720 total for 3 months)</div>
-                            </div>
                             
-                            <div class="early-bird-badge">
-                                *Early Bird: £30/week (£360 total)
-                            </div>
                             
                             <div class="pricing-features-new">
                                 <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months</div>
@@ -612,9 +583,14 @@
                                 <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Mon-Thurs (one session per day)</p>
                                 <p><i class="far fa-clock"></i> <strong>Timing:</strong> 17:15-18:15 or 18:30-19:30 GMT</p>
                             </div>
+
+                            <div class="pricing-price-new">
+                                <div class="main-price">£60<span>/week</span></div>
+                                <div class="price-note">(£720 total for 3 months)</div>
+                            </div>
                             
-                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
-                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                <i class="fas fa-flask me-2"></i> Start Learning
                             </button>
                         </div>
                     </div>
@@ -628,14 +604,7 @@
                     <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
                         <div class="pricing-card-new popular">
                             <div class="popular-badge">Most Popular</div>
-                            <div class="pricing-price-new">
-                                <div class="main-price">£96<span>/week</span></div>
-                                <div class="price-note">(£1,152 total for 3 months)</div>
-                            </div>
                             
-                            <div class="early-bird-badge">
-                                *Early Bird: £48/week (£576 total)
-                            </div>
                             
                             <div class="pricing-features-new">
                                 <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Premium Bundle Discount</strong></div>
@@ -651,9 +620,14 @@
                                 <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Mon-Thurs (two sessions per day)</p>
                                 <p><i class="far fa-clock"></i> <strong>Timing:</strong> 17:15-18:15 and 18:30-19:30 GMT</p>
                             </div>
+
+                            <div class="pricing-price-new">
+                                <div class="main-price">£96<span>/week</span></div>
+                                <div class="price-note">(£1,152 total for 3 months)</div>
+                            </div>
                             
-                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
-                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                <i class="fas fa-flask me-2"></i> Start Learning
                             </button>
                         </div>
                     </div>
@@ -666,14 +640,7 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
                         <div class="pricing-card-new">
-                            <div class="pricing-price-new">
-                                <div class="main-price">£120<span>/week</span></div>
-                                <div class="price-note">(£1,440 total for 3 months)</div>
-                            </div>
                             
-                            <div class="early-bird-badge">
-                                *Early Bird: £60/week (£720 total)
-                            </div>
                             
                             <div class="pricing-features-new">
                                 <div class="feature-item-new"><i class="fas fa-check"></i> Full Syllabus Coverage in 3 months</div>
@@ -689,9 +656,14 @@
                                 <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Fri-Sun (four hourly sessions)</p>
                                 <p><i class="far fa-clock"></i> <strong>Timing:</strong> Choose your preferred hours</p>
                             </div>
+
+                            <div class="pricing-price-new">
+                                <div class="main-price">£120<span>/week</span></div>
+                                <div class="price-note">(£1,440 total for 3 months)</div>
+                            </div>
                             
-                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
-                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                <i class="fas fa-flask me-2"></i> Start Learning
                             </button>
                         </div>
                     </div>
@@ -704,14 +676,6 @@
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10 mb-4" data-aos="fade-up">
                         <div class="pricing-card-new">
-                            <div class="pricing-price-new">
-                                <div class="main-price">£192<span>/week</span></div>
-                                <div class="price-note">(£2,304 total for 3 months)</div>
-                            </div>
-                            
-                            <div class="early-bird-badge">
-                                *Early Bird: £96/week (£1,152 total)
-                            </div>
                             
                             <div class="pricing-features-new">
                                 <div class="feature-item-new"><i class="fas fa-check"></i> <strong>Premium Bundle Discount</strong></div>
@@ -728,9 +692,14 @@
                                 <p><i class="far fa-calendar-days"></i> <strong>Days:</strong> Fri-Sun (four hourly sessions)</p>
                                 <p><i class="far fa-clock"></i> <strong>Timing:</strong> Choose your preferred hours</p>
                             </div>
+
+                            <div class="pricing-price-new">
+                                <div class="main-price">£192<span>/week</span></div>
+                                <div class="price-note">(£2,304 total for 3 months)</div>
+                            </div>
                             
-                            <button class="btn-choose-plan-new" onclick="window.location.href='index.html'">
-                                <i class="fas fa-flask me-2"></i> Book Diagnostic Session First
+                            <button class="btn-choose-plan-new" data-bs-toggle="modal" data-bs-target="#signupModal">
+                                <i class="fas fa-flask me-2"></i> Start Learning
                             </button>
                         </div>
                     </div>
@@ -739,11 +708,37 @@
             
             <!-- Pricing Notes -->
             <div class="pricing-notes-new" data-aos="fade-up">
-                <p>*Last date for early bird sign-up is 20th December. Weekly payment made in advance.</p>
                 <p>No hidden fees. No long-term contracts. Upgrade, pause, or cancel anytime.</p>
             </div>
         </div>
     </section>
+
+        <!-- Sign-Up Modal -->
+    <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="signupModalLabel">We will get back to you!</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form action="https://formspree.io/f/xgvglbwb" method="POST" id="signupForm">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <button type="submit" class="btn btn-choose-plan w-100">
+                            <i class="fas fa-paper-plane me-2"></i>Submit
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Footer -->
     <footer id="contact">
@@ -751,9 +746,9 @@
             <div class="row">
                 <div class="col-lg-6">
                     <div class="contact-info">
-                        <h5>Contact Information</h5>
+                        <h5>Contact Us</h5>
                         <a href="mailto:acechem.uk@gmail.com">
-                            <i class="fas fa-envelope"></i> acechem.uk@gmail.com
+                            <i class="fas fa-envelope"></i> acechem.uk@gmail.com (For Queries or Enrollment)
                         </a>
                         <p class="mt-3">Providing expert A Level Chemistry tuition across the UK</p>
                     </div>
@@ -778,7 +773,7 @@
             </div>
             <div class="row mt-4">
                 <div class="col-12 text-center">
-                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved.</p>
+                    <p class="mb-0">&copy; 2025 ACEChem. All rights reserved. | Designed for academic success</p>
                 </div>
             </div>
         </div>
